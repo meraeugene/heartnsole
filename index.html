@@ -1,0 +1,891 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeartnSole.ph | Authentic Kicks. Premium Style.</title>
+    <meta
+      name="description"
+      content="HeartnSole.ph is a premium sneaker boutique in Cagayan de Oro offering authentic kicks, hard-to-find sizes, flexible payments, and cozy in-store shopping."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blush: "#f7c4bd",
+              shell: "#fff6f1",
+              rose: "#e75b68",
+              wine: "#922a36",
+              ink: "#151111",
+              leaf: "#1f8b4c",
+              cream: "#fffaf3",
+            },
+            fontFamily: {
+              display: ["Bebas Neue", "Inter", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+              script: ["Sacramento", "cursive"],
+            },
+            boxShadow: {
+              luxe: "0 28px 90px rgba(146, 42, 54, 0.18)",
+              glow: "0 0 80px rgba(231, 91, 104, 0.35)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Inter, sans-serif;
+        color: #151111;
+        background:
+          radial-gradient(
+            circle at 15% 5%,
+            rgba(231, 91, 104, 0.22),
+            transparent 31rem
+          ),
+          radial-gradient(
+            circle at 88% 12%,
+            rgba(31, 139, 76, 0.13),
+            transparent 28rem
+          ),
+          linear-gradient(180deg, #f7c4bd 0%, #fff6f1 38%, #fffaf3 100%);
+        overflow-x: hidden;
+      }
+      .grain::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.18;
+        z-index: 1;
+        background-image:
+          linear-gradient(rgba(21, 17, 17, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(21, 17, 17, 0.025) 1px, transparent 1px);
+        background-size: 34px 34px;
+        mask-image: linear-gradient(to bottom, black, transparent 82%);
+      }
+      .glass {
+        background: rgba(255, 250, 243, 0.62);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow: 0 22px 70px rgba(146, 42, 54, 0.13);
+        backdrop-filter: blur(22px);
+      }
+      .logo-mark {
+        width: 52px;
+        height: 52px;
+        border: 4px solid #e75b68;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: #f8beb8;
+        box-shadow: inset 0 0 0 6px rgba(255, 250, 243, 0.42);
+        position: relative;
+      }
+      .logo-mark::before,
+      .logo-mark::after {
+        content: "";
+        position: absolute;
+        width: 18px;
+        height: 34px;
+        top: 8px;
+        border: 2px solid #151111;
+        border-radius: 18px 18px 8px 8px;
+        background: repeating-linear-gradient(
+          180deg,
+          #ef6974 0 4px,
+          #151111 5px 6px,
+          #ef6974 7px 10px
+        );
+      }
+      .logo-mark::before {
+        left: 12px;
+        transform: rotate(-34deg);
+      }
+      .logo-mark::after {
+        right: 12px;
+        transform: rotate(34deg);
+      }
+      .shoe-float {
+        animation: float 5.4s ease-in-out infinite;
+      }
+      .shoe-float-slow {
+        animation: float 7.2s ease-in-out infinite reverse;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-3deg);
+        }
+        50% {
+          transform: translateY(-16px) rotate(2deg);
+        }
+      }
+      .headline {
+        letter-spacing: 0;
+        line-height: 0.88;
+      }
+      .script-sweep {
+        font-family: Sacramento, cursive;
+        color: #6c3b22;
+        line-height: 1;
+      }
+      .sneaker-pattern {
+        background-image:
+          radial-gradient(
+            circle at center,
+            rgba(231, 91, 104, 0.22) 0 2px,
+            transparent 2px
+          ),
+          linear-gradient(
+            135deg,
+            transparent 0 47%,
+            rgba(146, 42, 54, 0.08) 48% 52%,
+            transparent 53%
+          );
+        background-size:
+          28px 28px,
+          44px 44px;
+      }
+      .product-card:hover img {
+        transform: translateY(-12px) rotate(-5deg) scale(1.04);
+      }
+      .site-header {
+        transition:
+          transform 0.32s ease,
+          opacity 0.32s ease;
+        will-change: transform, opacity;
+      }
+      .site-header.nav-hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-120%);
+      }
+      .soft-map {
+        background:
+          linear-gradient(90deg, rgba(231, 91, 104, 0.2) 1px, transparent 1px),
+          linear-gradient(rgba(146, 42, 54, 0.14) 1px, transparent 1px),
+          radial-gradient(
+            circle at 58% 45%,
+            rgba(31, 139, 76, 0.22),
+            transparent 11rem
+          ),
+          #fff6f1;
+        background-size:
+          42px 42px,
+          42px 42px,
+          auto,
+          auto;
+      }
+    </style>
+  </head>
+  <body class="grain">
+    <div class="relative z-10">
+      <header
+        id="siteHeader"
+        class="site-header fixed left-0 right-0 top-0 z-50 px-4 py-4"
+      >
+        <nav
+          class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/70 bg-cream/70 px-4 py-3 shadow-luxe backdrop-blur-2xl md:px-6"
+        >
+          <a href="#" class="flex items-center gap-3">
+            <span class="logo-mark shrink-0"></span>
+            <span>
+              <span class="block font-script text-3xl leading-none text-ink"
+                >HeartnSole</span
+              >
+              <span
+                class="block text-[10px] font-black uppercase tracking-[.24em] text-wine"
+                >Premium Kicks CDO</span
+              >
+            </span>
+          </a>
+          <div
+            class="hidden items-center gap-7 text-sm font-bold text-ink/75 md:flex"
+          >
+            <a class="transition hover:text-rose" href="#collection"
+              >Collection</a
+            >
+            <a class="transition hover:text-rose" href="#why">Why Us</a>
+            <a class="transition hover:text-rose" href="#payments">Payments</a>
+            <a class="transition hover:text-rose" href="#reviews">Reviews</a>
+          </div>
+          <a
+            href="#visit"
+            class="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-extrabold text-white shadow-lg shadow-wine/20 transition hover:-translate-y-0.5 hover:bg-wine"
+          >
+            <i data-lucide="map-pin" class="h-4 w-4"></i>
+            Store
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section
+          class="relative overflow-hidden px-4 pb-20 pt-28 md:pt-32"
+        >
+          <div
+            class="absolute left-1/2 top-24 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-rose/20 blur-3xl"
+          ></div>
+          <div
+            class="absolute -right-20 top-40 h-72 w-72 rounded-full bg-leaf/10 blur-3xl"
+          ></div>
+          <div
+            class="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.05fr_.95fr]"
+          >
+            <div data-aos="fade-up">
+              <div
+                class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/45 px-4 py-2 text-sm font-black text-wine shadow-lg backdrop-blur-xl"
+              >
+                <i data-lucide="badge-check" class="h-4 w-4 text-leaf"></i>
+                100% Authentic Sneakers
+              </div>
+              <p
+                class="mb-3 font-serif text-xl italic text-wine/90 md:text-2xl"
+              >
+                Cagayan de Oro's cozy boutique for serious sneaker lovers.
+              </p>
+              <h1
+                class="headline max-w-4xl font-display text-[4.8rem] text-ink sm:text-[6.2rem] lg:text-[6rem] xl:text-[6.7rem] 2xl:text-[7.2rem]"
+              >
+                Authentic Kicks.
+                <span class="block text-rose drop-shadow-sm"
+                  >Premium Style.</span
+                >
+              </h1>
+              <p
+                class="mt-4 max-w-xl text-base font-medium leading-7 text-ink/70 md:text-lg"
+              >
+                HeartnSole.ph blends streetwear confidence with soft luxury,
+                curated for collectors who want legit pairs, rare sizes, and a
+                store that feels as good as the fit.
+              </p>
+              <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#collection"
+                  class="inline-flex items-center justify-center gap-2 rounded-full bg-rose px-7 py-3.5 font-black text-white shadow-glow transition hover:-translate-y-1 hover:bg-wine"
+                >
+                  Shop Collection
+                  <i data-lucide="arrow-up-right" class="h-5 w-5"></i>
+                </a>
+                <a
+                  href="#visit"
+                  class="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-white/55 px-7 py-3.5 font-black text-ink shadow-lg backdrop-blur-xl transition hover:-translate-y-1 hover:border-rose hover:text-wine"
+                >
+                  Visit Store
+                  <i data-lucide="store" class="h-5 w-5"></i>
+                </a>
+              </div>
+            </div>
+
+            <div
+              class="relative mx-auto w-full max-w-lg pt-2"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+            >
+              <div
+                class="absolute inset-8 rounded-[3rem] bg-white/45 blur-2xl"
+              ></div>
+              <div
+                class="relative rounded-[2.2rem] border border-white/80 bg-gradient-to-br from-white/70 via-shell/80 to-blush/60 p-4 shadow-luxe backdrop-blur-xl"
+              >
+                <div
+                  class="sneaker-pattern relative overflow-hidden rounded-[1.7rem] bg-cream p-5"
+                >
+                  <img
+                    class="shoe-float mx-auto h-64 w-full object-contain drop-shadow-2xl md:h-[21rem] lg:h-[23rem]"
+                    src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=1100&q=85"
+                    alt="Premium blush and white sneaker"
+                  />
+                  <div
+                    class="absolute left-5 top-5 rounded-2xl bg-ink px-4 py-3 text-white shadow-xl"
+                  >
+                    <p
+                      class="text-xs font-black uppercase tracking-[.18em] text-blush"
+                    >
+                      Drop Watch
+                    </p>
+                    <p class="font-serif text-xl font-bold">Collector Picks</p>
+                  </div>
+                  <div
+                    class="absolute bottom-5 right-5 rounded-2xl bg-white/78 px-4 py-3 shadow-xl backdrop-blur-xl"
+                  >
+                    <p
+                      class="text-xs font-black uppercase tracking-[.18em] text-wine"
+                    >
+                      From
+                    </p>
+                    <p class="text-2xl font-black text-ink">Jordan 1</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="glass shoe-float-slow absolute -left-2 bottom-10 hidden rounded-3xl p-4 md:block"
+              >
+                <img
+                  class="h-24 w-36 object-cover"
+                  src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=500&q=80"
+                  alt="Streetwear sneaker card"
+                />
+                <p class="mt-2 text-sm font-black">Rare sizes ready</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="collection" class="px-4 pb-20 pt-8 md:pt-10">
+          <div class="mx-auto max-w-7xl">
+            <div
+              class="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end"
+              data-aos="fade-up"
+            >
+              <div>
+                <p class="script-sweep text-5xl">Fresh pairs, curated softly</p>
+                <h2 class="font-display text-6xl text-ink md:text-8xl">
+                  Featured Sneakers
+                </h2>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="rounded-full bg-white/60 px-4 py-2 text-sm font-black text-wine shadow-sm"
+                  >Jordan</span
+                >
+                <span
+                  class="rounded-full bg-white/60 px-4 py-2 text-sm font-black text-wine shadow-sm"
+                  >Nike</span
+                >
+                <span
+                  class="rounded-full bg-white/60 px-4 py-2 text-sm font-black text-wine shadow-sm"
+                  >New Balance</span
+                >
+                <span
+                  class="rounded-full bg-white/60 px-4 py-2 text-sm font-black text-wine shadow-sm"
+                  >On Running</span
+                >
+              </div>
+            </div>
+            <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              <article
+                class="product-card group rounded-[2rem] bg-white/58 p-5 shadow-luxe backdrop-blur-xl transition duration-500 hover:-translate-y-2"
+                data-aos="fade-up"
+              >
+                <div
+                  class="rounded-[1.5rem] bg-gradient-to-br from-blush/65 to-cream p-5"
+                >
+                  <img
+                    class="h-52 w-full object-contain transition duration-500"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=85"
+                    alt="Nike statement sneaker"
+                  />
+                </div>
+                <p
+                  class="mt-5 text-xs font-black uppercase tracking-[.2em] text-rose"
+                >
+                  Nike
+                </p>
+                <h3 class="mt-1 text-2xl font-black">Street Runner Edit</h3>
+                <p class="mt-2 text-sm font-semibold text-ink/60">
+                  Bold colorways, clean profiles, daily flex.
+                </p>
+              </article>
+              <article
+                class="product-card group rounded-[2rem] bg-white/58 p-5 shadow-luxe backdrop-blur-xl transition duration-500 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="80"
+              >
+                <div
+                  class="rounded-[1.5rem] bg-gradient-to-br from-cream to-rose/20 p-5"
+                >
+                  <img
+                    class="h-52 w-full object-contain transition duration-500"
+                    src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=700&q=85"
+                    alt="Jordan collector sneaker"
+                  />
+                </div>
+                <p
+                  class="mt-5 text-xs font-black uppercase tracking-[.2em] text-rose"
+                >
+                  Jordan
+                </p>
+                <h3 class="mt-1 text-2xl font-black">Low Heat Rotation</h3>
+                <p class="mt-2 text-sm font-semibold text-ink/60">
+                  Collector-loved pairs with legit checks.
+                </p>
+              </article>
+              <article
+                class="product-card group rounded-[2rem] bg-white/58 p-5 shadow-luxe backdrop-blur-xl transition duration-500 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="160"
+              >
+                <div
+                  class="rounded-[1.5rem] bg-gradient-to-br from-leaf/10 to-shell p-5"
+                >
+                  <img
+                    class="h-52 w-full object-contain transition duration-500"
+                    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?auto=format&fit=crop&w=700&q=85"
+                    alt="New Balance premium sneaker"
+                  />
+                </div>
+                <p
+                  class="mt-5 text-xs font-black uppercase tracking-[.2em] text-rose"
+                >
+                  New Balance
+                </p>
+                <h3 class="mt-1 text-2xl font-black">Soft Neutral Staples</h3>
+                <p class="mt-2 text-sm font-semibold text-ink/60">
+                  Quiet luxury comfort with premium textures.
+                </p>
+              </article>
+              <article
+                class="product-card group rounded-[2rem] bg-white/58 p-5 shadow-luxe backdrop-blur-xl transition duration-500 hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="240"
+              >
+                <div
+                  class="rounded-[1.5rem] bg-gradient-to-br from-blush/45 to-white p-5"
+                >
+                  <img
+                    class="h-52 w-full object-contain transition duration-500"
+                    src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?auto=format&fit=crop&w=700&q=85"
+                    alt="Performance lifestyle sneaker"
+                  />
+                </div>
+                <p
+                  class="mt-5 text-xs font-black uppercase tracking-[.2em] text-rose"
+                >
+                  On Running
+                </p>
+                <h3 class="mt-1 text-2xl font-black">Cloud Comfort Picks</h3>
+                <p class="mt-2 text-sm font-semibold text-ink/60">
+                  Clean, airy, and built for all-day movement.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="why" class="px-4 py-20">
+          <div
+            class="mx-auto max-w-7xl rounded-[2.5rem] bg-ink p-6 text-white shadow-luxe md:p-10"
+          >
+            <div class="grid gap-8 lg:grid-cols-[.78fr_1.22fr]">
+              <div data-aos="fade-right">
+                <p class="script-sweep text-5xl text-blush">Why HeartnSole</p>
+                <h2 class="font-display text-6xl md:text-8xl">
+                  Legit pairs, lovely service.
+                </h2>
+                <p class="mt-5 text-lg leading-8 text-white/68">
+                  Made for sneaker enthusiasts who want trusted sourcing,
+                  hard-to-find options, and a boutique visit that feels
+                  personal, warm, and polished.
+                </p>
+              </div>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-3xl bg-white/8 p-6" data-aos="fade-up">
+                  <i
+                    data-lucide="shield-check"
+                    class="mb-5 h-8 w-8 text-blush"
+                  ></i>
+                  <h3 class="text-xl font-black">Authentic Products</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/62">
+                    Curated sneakers with confidence and care.
+                  </p>
+                </div>
+                <div
+                  class="rounded-3xl bg-white/8 p-6"
+                  data-aos="fade-up"
+                  data-aos-delay="80"
+                >
+                  <i
+                    data-lucide="search-check"
+                    class="mb-5 h-8 w-8 text-blush"
+                  ></i>
+                  <h3 class="text-xl font-black">Hard-to-Find Sizes</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/62">
+                    For favorite colorways that rarely sit long.
+                  </p>
+                </div>
+                <div
+                  class="rounded-3xl bg-white/8 p-6"
+                  data-aos="fade-up"
+                  data-aos-delay="160"
+                >
+                  <i data-lucide="sparkles" class="mb-5 h-8 w-8 text-blush"></i>
+                  <h3 class="text-xl font-black">Affordable Premium</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/62">
+                    Luxury energy without intimidating pricing.
+                  </p>
+                </div>
+                <div
+                  class="rounded-3xl bg-white/8 p-6"
+                  data-aos="fade-up"
+                  data-aos-delay="240"
+                >
+                  <i data-lucide="sofa" class="mb-5 h-8 w-8 text-blush"></i>
+                  <h3 class="text-xl font-black">Cozy Trusted Store</h3>
+                  <p class="mt-2 text-sm leading-6 text-white/62">
+                    Clean space, accommodating staff, real boutique feel.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="payments" class="px-4 py-20">
+          <div class="mx-auto max-w-7xl">
+            <div class="mb-10 text-center" data-aos="fade-up">
+              <p class="script-sweep text-5xl">Easy ways to cop</p>
+              <h2 class="font-display text-6xl md:text-8xl">Payment Options</h2>
+            </div>
+            <div class="grid gap-5 md:grid-cols-3">
+              <div
+                class="glass rounded-[2rem] p-7 transition hover:-translate-y-2"
+                data-aos="fade-up"
+              >
+                <div
+                  class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-rose/70 text-ink"
+                >
+                  <i data-lucide="hand-coins" class="h-9 w-9"></i>
+                </div>
+                <h3 class="text-3xl font-black">Cash</h3>
+                <p class="mt-3 font-serif text-lg italic leading-7 text-ink/70">
+                  Hassle-free payment directly at our store.
+                </p>
+              </div>
+              <div
+                class="glass rounded-[2rem] p-7 transition hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="90"
+              >
+                <div
+                  class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-rose/70 text-ink"
+                >
+                  <i data-lucide="qr-code" class="h-9 w-9"></i>
+                </div>
+                <h3 class="text-3xl font-black">Online & E-wallet</h3>
+                <p class="mt-3 font-serif text-lg italic leading-7 text-ink/70">
+                  GCash, Maya, ShopeePay, GGive, bank transfer, and QRPH.
+                </p>
+              </div>
+              <div
+                class="glass rounded-[2rem] p-7 transition hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-delay="180"
+              >
+                <div
+                  class="mb-6 grid h-16 w-16 place-items-center rounded-2xl bg-rose/70 text-ink"
+                >
+                  <i data-lucide="credit-card" class="h-9 w-9"></i>
+                </div>
+                <h3 class="text-3xl font-black">Credit & Installment</h3>
+                <p class="mt-3 font-serif text-lg italic leading-7 text-ink/70">
+                  Credit/debit card and installments for BDO cardholders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="px-4 py-20">
+          <div class="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[.85fr_1.15fr]">
+            <div class="glass rounded-[2.4rem] p-8" data-aos="fade-right">
+              <p class="script-sweep text-5xl">Step in</p>
+              <h2 class="font-display text-6xl md:text-8xl">Store Hours</h2>
+              <p class="mt-4 text-lg font-semibold text-ink/62">
+                Your next pair is waiting.
+              </p>
+            </div>
+            <div class="grid gap-5 md:grid-cols-2">
+              <div
+                class="rounded-[2rem] border border-white/80 bg-white/62 p-7 shadow-luxe"
+                data-aos="fade-up"
+              >
+                <span
+                  class="inline-flex rounded-2xl border-2 border-ink bg-white px-6 py-3 text-xl font-black"
+                  >Monday</span
+                >
+                <p
+                  class="mt-6 rounded-2xl bg-blush/35 px-5 py-5 text-xl font-black uppercase text-wine"
+                >
+                  By appointment only
+                </p>
+                <p class="mt-4 font-semibold text-ink/60">
+                  Message us in advance for Monday appointments.
+                </p>
+              </div>
+              <div
+                class="rounded-[2rem] border border-white/80 bg-white/62 p-7 shadow-luxe"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <span
+                  class="inline-flex rounded-2xl border-2 border-ink bg-white px-6 py-3 text-xl font-black"
+                  >Tuesday - Sunday</span
+                >
+                <p
+                  class="mt-6 rounded-2xl bg-blush/35 px-5 py-5 text-3xl font-black text-wine"
+                >
+                  12PM - 8PM
+                </p>
+                <p class="mt-4 font-semibold text-ink/60">
+                  Open for walk-ins and cozy in-store browsing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="visit" class="px-4 py-20">
+          <div class="mx-auto max-w-7xl">
+            <div class="mb-10 text-center" data-aos="fade-up">
+              <p class="script-sweep text-5xl">Find us in CDO</p>
+              <h2 class="font-display text-6xl md:text-8xl">Store Location</h2>
+            </div>
+            <div
+              class="grid overflow-hidden rounded-[2.5rem] bg-white/60 shadow-luxe backdrop-blur-xl lg:grid-cols-[1.1fr_.9fr]"
+              data-aos="zoom-in"
+            >
+              <div class="relative min-h-[360px] bg-shell p-4 md:p-6">
+                <img
+                  class="h-full min-h-[360px] w-full rounded-[2rem] object-cover shadow-2xl"
+                  src="assets/store-location.jpg"
+                  alt="HeartnSole.ph store location at Unit 105, MJM Building, Toribio Chavez Street Plaza Divisoria, Cagayan de Oro City 9000"
+                  onerror="
+                    this.classList.add('hidden');
+                    this.nextElementSibling.classList.remove('hidden');
+                  "
+                />
+                <div class="soft-map hidden min-h-[360px] rounded-[2rem] p-8">
+                  <div
+                    class="absolute left-[52%] top-[45%] grid h-20 w-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-rose text-white shadow-glow"
+                  >
+                    <i data-lucide="map-pin" class="h-10 w-10"></i>
+                  </div>
+                  <div
+                    class="absolute bottom-8 left-8 rounded-3xl bg-white/75 p-5 shadow-xl backdrop-blur-xl"
+                  >
+                    <p
+                      class="text-xs font-black uppercase tracking-[.22em] text-wine"
+                    >
+                      MJM Building
+                    </p>
+                    <p class="mt-1 text-2xl font-black">Unit 105</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-8 md:p-10">
+                <p
+                  class="text-sm font-black uppercase tracking-[.24em] text-leaf"
+                >
+                  Visit Our Store
+                </p>
+                <h3
+                  class="mt-3 font-serif text-4xl font-bold leading-tight md:text-5xl"
+                >
+                  A cozy sneaker stop in Plaza Divisoria.
+                </h3>
+                <p class="mt-5 text-lg font-semibold leading-8 text-ink/68">
+                  Unit 105, MJM Building, Toribio Chavez Street Plaza Divisoria,
+                  Cagayan de Oro City 9000
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Unit%20105%20MJM%20Building%20Toribio%20Chavez%20Street%20Plaza%20Divisoria%20Cagayan%20de%20Oro%20City%209000"
+                  class="mt-7 inline-flex items-center gap-2 rounded-full bg-ink px-7 py-4 font-black text-white shadow-lg transition hover:-translate-y-1 hover:bg-wine"
+                >
+                  Visit Our Store
+                  <i data-lucide="navigation" class="h-5 w-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" class="px-4 pb-20 pt-8 md:pt-10">
+          <div class="mx-auto max-w-7xl">
+            <div class="mb-10" data-aos="fade-up">
+              <p class="script-sweep text-5xl">Loved by collectors</p>
+              <h2 class="font-display text-6xl md:text-8xl">
+                Customer Reviews
+              </h2>
+            </div>
+            <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              <blockquote class="glass rounded-[2rem] p-6" data-aos="fade-up">
+                <i data-lucide="quote" class="mb-5 h-7 w-7 text-rose"></i>
+                <p class="font-serif text-xl leading-8">
+                  I recommend this place sa mga ga plan og buy og shoes. Staff
+                  is very accommodating and the store is cozy and clean.
+                </p>
+                <cite class="mt-5 block font-black not-italic text-wine"
+                  >Ivan Welnor</cite
+                >
+              </blockquote>
+              <blockquote
+                class="glass rounded-[2rem] p-6"
+                data-aos="fade-up"
+                data-aos-delay="70"
+              >
+                <i data-lucide="quote" class="mb-5 h-7 w-7 text-rose"></i>
+                <p class="font-serif text-xl leading-8">
+                  Got my Jordan 1 Low Alternate Bredtoe... the best.
+                </p>
+                <cite class="mt-5 block font-black not-italic text-wine"
+                  >Ramnols Marl J. Nercuit</cite
+                >
+              </blockquote>
+              <blockquote
+                class="glass rounded-[2rem] p-6"
+                data-aos="fade-up"
+                data-aos-delay="140"
+              >
+                <i data-lucide="quote" class="mb-5 h-7 w-7 text-rose"></i>
+                <p class="font-serif text-xl leading-8">
+                  100% legit shoes! Recommended shop for shoe collectors!
+                </p>
+                <cite class="mt-5 block font-black not-italic text-wine"
+                  >Dominic Christian Nercua</cite
+                >
+              </blockquote>
+              <blockquote class="glass rounded-[2rem] p-6" data-aos="fade-up">
+                <i data-lucide="quote" class="mb-5 h-7 w-7 text-rose"></i>
+                <p class="font-serif text-xl leading-8">
+                  Was looking everywhere to find my size and favorite colorway.
+                  Authentic and affordable.
+                </p>
+                <cite class="mt-5 block font-black not-italic text-wine"
+                  >Kit Ondong</cite
+                >
+              </blockquote>
+              <blockquote
+                class="glass rounded-[2rem] p-6 md:col-span-2"
+                data-aos="fade-up"
+                data-aos-delay="70"
+              >
+                <i data-lucide="quote" class="mb-5 h-7 w-7 text-rose"></i>
+                <p class="font-serif text-xl leading-8">
+                  As a sneaker enthusiast, this store has all the kicks I need.
+                  Did not disappoint when I bought my Tokyo Low SE here.
+                </p>
+                <cite class="mt-5 block font-black not-italic text-wine"
+                  >Hugh Von Esling</cite
+                >
+              </blockquote>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="px-4 pb-8">
+        <div
+          class="mx-auto max-w-7xl rounded-[2rem] bg-ink px-6 py-8 text-white shadow-luxe md:px-10"
+        >
+          <div
+            class="flex flex-col justify-between gap-8 md:flex-row md:items-center"
+          >
+            <div class="flex items-center gap-3">
+              <span class="logo-mark shrink-0"></span>
+              <div>
+                <p class="font-script text-4xl leading-none">HeartnSole.ph</p>
+                <p class="text-sm font-bold text-white/50">
+                  Authentic kicks, premium style.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a
+                class="inline-flex items-center gap-2 rounded-full bg-white/8 px-5 py-3 font-bold transition hover:bg-rose"
+                href="tel:09950118608"
+                ><i data-lucide="phone" class="h-4 w-4"></i>09950118608</a
+              >
+              <a
+                class="inline-flex items-center gap-2 rounded-full bg-white/8 px-5 py-3 font-bold transition hover:bg-rose"
+                href="#"
+                ><i data-lucide="facebook" class="h-4 w-4"></i>HeartnSole.ph</a
+              >
+              <a
+                class="inline-flex items-center gap-2 rounded-full bg-white/8 px-5 py-3 font-bold transition hover:bg-rose"
+                href="#"
+                ><i data-lucide="instagram" class="h-4 w-4"></i
+                >@theheartnsolecdo</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      lucide.createIcons();
+      AOS.init({
+        duration: 850,
+        easing: "ease-out-cubic",
+        once: true,
+        offset: 80,
+      });
+
+      const siteHeader = document.getElementById("siteHeader");
+      let lastScrollY = window.scrollY;
+      let navClickHideTimer;
+
+      function hideHeader() {
+        siteHeader.classList.add("nav-hidden");
+      }
+
+      function showHeader() {
+        siteHeader.classList.remove("nav-hidden");
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          const href = link.getAttribute("href");
+          if (href === "#") {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            showHeader();
+            return;
+          }
+
+          const target = document.querySelector(href);
+          if (!target) return;
+          event.preventDefault();
+          clearTimeout(navClickHideTimer);
+          const targetTop =
+            target.getBoundingClientRect().top + window.scrollY - 24;
+          window.scrollTo({ top: targetTop, behavior: "smooth" });
+          navClickHideTimer = setTimeout(hideHeader, 180);
+        });
+      });
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          const currentScrollY = window.scrollY;
+          const isScrollingUp = currentScrollY < lastScrollY;
+
+          if (currentScrollY < 80 || isScrollingUp) {
+            showHeader();
+          } else if (currentScrollY > lastScrollY + 4) {
+            hideHeader();
+          }
+
+          lastScrollY = Math.max(currentScrollY, 0);
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
